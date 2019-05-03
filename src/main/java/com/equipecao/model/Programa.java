@@ -11,7 +11,7 @@ public class Programa {
     private int faixaEtariaDe;
     private int faixaEtariaAte;
     private List escolaridade;
-    private String destinos;
+    private List destinos;
     private List nivel;
     private int duracaoDe;
     private int duracaoAte;
