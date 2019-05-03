@@ -184,7 +184,7 @@ rule "Trabalho + Estudo 1"
                 		               Programa(acomodacao.contains("RE"))
                 		               Programa(nivel.contains("B") || nivel.contains("I") || nivel.contains("A") )
                 		               Programa(escolaridade.contains("EF"))
-                		               Programa(destinos =="NA")  //temm que colocar depois
+                		               Programa(destinos.contains("IRL") || destinos.contains("AUS") || destinos.contains("CAN") || destinos.contains("NZL"))
                 		               Programa(duracaoDe >=2 && duracaoAte <=104)
                 		               Programa(tipoInter=="TE")
 
@@ -198,7 +198,7 @@ rule "Trabalho + Estudo 1"
                  		               //Programa(acomodacao.contains("NA"))
                  		               Programa(nivel.contains("I") || nivel.contains("A") )
                  		               Programa(escolaridade.contains("EF"))
-                 		               //Programa(destinos =="NA")  //temm que colocar depois
+                 		               Programa(destinos.contains("ZA"))
                  		               Programa(duracaoDe >=2 && duracaoAte <=52)
                  		               Programa(tipoInter=="TE")
 
@@ -212,7 +212,7 @@ rule "Trabalho + Estudo 1"
                  		               Programa(acomodacao.contains("CA"))
                  		               Programa(nivel.contains("I")  )
                  		               //Programa(escolaridade =="NA")
-                 		               Programa(destinos =="EUA")
+                 		               Programa(destinos.contains("EUA"))
                  		               Programa(duracaoDe >=2 && duracaoAte <=104)
                  		               Programa(tipoInter=="TE")
 
@@ -226,7 +226,7 @@ rule "Trabalho + Estudo 1"
                  		               Programa(acomodacao.contains("CA"))
                  		               Programa(nivel.contains("I")  )
                  		               Programa(escolaridade.contains("EF"))
-                 		               Programa(destinos =="AUS")
+                 		               Programa(destinos.contains("AUS"))
                  		               Programa(duracaoDe >=2 && duracaoAte <=104)
                  		               Programa(tipoInter=="TE")
 
