@@ -8,13 +8,11 @@ import java.util.List;
 public class Programa {
 
     private String 	tipoInter;
-    private int faixaEtariaDe;
-    private int faixaEtariaAte;
+    private int faixaEtaria;
     private List escolaridade;
     private List destinos;
     private List nivel;
-    private int duracaoDe;
-    private int duracaoAte;
+    private int duracao;
     private List acomodacao;
     private String curso;
 }
