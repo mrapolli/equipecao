@@ -8,10 +8,11 @@ rule "Cursos de idiomas 1"
 	when 
 		ProgramaObject: Programa(faixaEtariaDe >=9 && faixaEtariaAte <=18)
 		               Programa(acomodacao.contains("RE") || acomodacao.contains("CF") || acomodacao.contains("H") || acomodacao.contains("A") || acomodacao.contains("CU"))
-		               Programa(nivel.contains("NA"))
-		               Programa(escolaridade !="M" ) //&& escolaridade !="EF"
-		               Programa(destinos =="NA")
-		               Programa(duracaoDe == 0)
+		               //Programa(nivel.contains("NA"))
+		               Programa(!escolaridade.contains("M") && !escolaridade.contains("EF"))
+		               //Programa(destinos =="NA")
+		               Programa(duracaoDe == 2)
+		               Programa(duracaoAte == 6)
 		               Programa(tipoInter=="E")
 
 	then
@@ -21,11 +22,12 @@ rule "Cursos de idiomas 1"
 	rule "Cursos de idiomas 2"
     	when
     		ProgramaObject: Programa(faixaEtariaDe >=18 && faixaEtariaDe <=35)
-    		               Programa(acomodacao.contains("NA"))
+    		               //Programa(acomodacao.contains("NA"))
     		               Programa(nivel.contains("B"))
-    		               Programa(escolaridade =="NA")
-    		               Programa(destinos =="NA")
-    		               Programa(duracaoDe == 0)
+    		               //Programa(escolaridade.contains("NA"))
+    		               //Programa(destinos =="NA")
+    		               Programa(duracaoDe == 8)
+    		               Programa(duracaoAte == 156)
     		               Programa(tipoInter=="E")
 
     	then
@@ -36,9 +38,9 @@ rule "Oferecer o Programa de Férias 1"
 	when
     		ProgramaObject: Programa(faixaEtariaDe >=9 && faixaEtariaAte <=18)
     		               Programa(acomodacao.contains("RE") || acomodacao.contains("CA"))
-    		               Programa(nivel.contains("NA"))
-    		               Programa(escolaridade =="EM")
-    		               Programa(destinos =="NA")
+    		               //Programa(nivel.contains("NA"))
+    		               Programa(escolaridade.contains("EM"))
+    		               //Programa(destinos =="NA")
     		               Programa(duracaoDe >=2 && duracaoAte <=6)
     		               Programa(tipoInter=="E")
 
@@ -50,9 +52,9 @@ rule "Oferecer o Programa de Férias 2"
 	when
     		ProgramaObject: Programa(faixaEtariaDe >=9 && faixaEtariaAte <=18)
                 		               Programa(acomodacao.contains("RE") || acomodacao.contains("CA"))
-                		               Programa(nivel.contains("NA"))
-                		               Programa(escolaridade =="EF")
-                		               Programa(destinos =="NA")
+                		               //Programa(nivel.contains("NA"))
+                		               Programa(escolaridade.contains("EF"))
+                		               //Programa(destinos =="NA")
                 		               Programa(duracaoDe >=2 && duracaoAte <=6)
                 		               Programa(tipoInter=="E")
 
@@ -64,10 +66,10 @@ rule "Oferecer o Programa de Férias 2"
 rule "High School 1"
 	when
     		ProgramaObject: Programa(faixaEtariaDe >=14 && faixaEtariaAte <=18)
-                		               Programa(acomodacao.contains("NA"))
-                		               Programa(nivel.contains("NA"))
-                		               Programa(escolaridade =="EM")
-                		               Programa(destinos =="NA")
+                		               //Programa(acomodacao.contains("NA"))
+                		               //Programa(nivel.contains("NA"))
+                		               Programa(escolaridade.contains("EF"))
+                		               //Programa(destinos =="NA")
                 		               Programa(duracaoDe >=2 && duracaoAte <=6)
                 		               Programa(tipoInter=="E")
 
@@ -78,11 +80,12 @@ rule "High School 1"
 rule "Estudo 1"
 	when
     		ProgramaObject: Programa(faixaEtariaDe >=9 && faixaEtariaAte <=18)
-                		               Programa(acomodacao.contains("NA") )
-                		               Programa(nivel.contains("NA"))
-                		               Programa(escolaridade =="NA")
-                		               Programa(destinos =="NA")
+                		               //Programa(acomodacao.contains("NA") )
+                		               //Programa(nivel.contains("NA"))
+                		               //Programa(escolaridade =="NA")
+                		               //Programa(destinos =="NA")
                 		               Programa(duracaoDe ==0)
+                		               Programa(duracaoAte ==0)
                 		               Programa(tipoInter=="E")
 
     	then
@@ -94,8 +97,8 @@ rule "Estudo 2"
     		ProgramaObject: Programa(faixaEtariaDe >=18 && faixaEtariaAte <=35)
                 		               Programa(acomodacao.contains("RE") || acomodacao.contains("CA") || acomodacao.contains("H"))
                 		               Programa(nivel.contains("I"))
-                		               Programa(escolaridade =="NA")
-                		               Programa(destinos =="NA")
+                		               //Programa(escolaridade =="NA")
+                		               //Programa(destinos =="NA")
                 		               Programa(duracaoDe >=8 && duracaoAte <=156)
                 		               Programa(tipoInter=="E")
 
@@ -108,8 +111,8 @@ rule "Estudo 3"
     		ProgramaObject: Programa(faixaEtariaDe >=18 && faixaEtariaAte <=35)
                 		               Programa(acomodacao.contains("CU"))
                 		               Programa(nivel.contains("I"))
-                		               Programa(escolaridade =="NA")
-                		               Programa(destinos =="NA")
+                		               //Programa(escolaridade =="NA")
+                		               //Programa(destinos =="NA")
                 		               Programa(duracaoDe >=8 && duracaoAte <=156)
                 		               Programa(tipoInter=="E")
 //Se o usuário escolher Campus Universitário, exibir apenas Programa Universitário.
@@ -122,8 +125,8 @@ rule "Estudo 4"
     		ProgramaObject: Programa(faixaEtariaDe >=18 && faixaEtariaAte <=35)
                 		               Programa(acomodacao.contains("RE") || acomodacao.contains("CA") || acomodacao.contains("H"))
                 		               Programa(nivel.contains("A"))
-                		               Programa(escolaridade =="NA")
-                		               Programa(destinos =="NA")
+                		               //Programa(escolaridade =="NA")
+                		               //Programa(destinos =="NA")
                 		               Programa(duracaoDe >=8 && duracaoAte <=156)
                 		               Programa(tipoInter=="E")
 
@@ -136,8 +139,8 @@ rule "Estudo 5"
     		ProgramaObject: Programa(faixaEtariaDe >=18 && faixaEtariaAte <=35)
                 		               Programa(acomodacao.contains("H"))
                 		               Programa(nivel.contains("A"))
-                		               Programa(escolaridade =="NA")
-                		               Programa(destinos =="NA")
+                		               //Programa(escolaridade =="NA")
+                		               //Programa(destinos =="NA")
                 		               Programa(duracaoDe >=8 && duracaoAte <=156)
                 		               Programa(tipoInter=="E")
 
@@ -148,10 +151,10 @@ rule "Estudo 5"
 rule "Estudo 6"
 	when
     		ProgramaObject: Programa(faixaEtariaDe >=18 && faixaEtariaAte <=35)
-                		               Programa(acomodacao.contains("NA"))
+                		               //Programa(acomodacao.contains("NA"))
                 		               Programa(nivel.contains("B"))
-                		               Programa(escolaridade =="NA")
-                		               Programa(destinos =="NA")
+                		               // Programa(escolaridade =="NA")
+                		               //Programa(destinos =="NA")
                 		               Programa(duracaoDe >=8 && duracaoAte <=156)
                 		               Programa(tipoInter=="E")
 
@@ -162,10 +165,10 @@ rule "Estudo 6"
 rule "Estudo 7"
 	when
     		ProgramaObject: Programa(faixaEtariaDe >=18 && faixaEtariaAte <=35)
-                		               Programa(acomodacao.contains("NA"))
-                		               Programa(nivel.contains("NA"))
-                		               Programa(escolaridade =="NA")
-                		               Programa(destinos =="NA")
+                		               //Programa(acomodacao.contains("NA"))
+                		               //Programa(nivel.contains("NA"))
+                		               //Programa(escolaridade =="NA")
+                		               //Programa(destinos =="NA")
                 		               Programa(duracaoDe >=8 && duracaoAte <=156)
                 		               Programa(tipoInter=="E")
 
@@ -180,7 +183,7 @@ rule "Trabalho + Estudo 1"
     		ProgramaObject: Programa(faixaEtariaDe >=18 && faixaEtariaAte <=26)
                 		               Programa(acomodacao.contains("RE"))
                 		               Programa(nivel.contains("B") || nivel.contains("I") || nivel.contains("A") )
-                		               Programa(escolaridade =="EM")
+                		               Programa(escolaridade.contains("EF"))
                 		               Programa(destinos =="NA")  //temm que colocar depois
                 		               Programa(duracaoDe >=2 && duracaoAte <=104)
                 		               Programa(tipoInter=="TE")
@@ -192,10 +195,10 @@ rule "Trabalho + Estudo 1"
  rule "Trabalho voluntário 1"
  	when
      		ProgramaObject: Programa(faixaEtariaDe >=18 && faixaEtariaAte <=26)
-                 		               Programa(acomodacao.contains("NA"))
+                 		               //Programa(acomodacao.contains("NA"))
                  		               Programa(nivel.contains("I") || nivel.contains("A") )
-                 		               Programa(escolaridade =="EM")
-                 		               Programa(destinos =="NA")  //temm que colocar depois
+                 		               Programa(escolaridade.contains("EF"))
+                 		               //Programa(destinos =="NA")  //temm que colocar depois
                  		               Programa(duracaoDe >=2 && duracaoAte <=52)
                  		               Programa(tipoInter=="TE")
 
@@ -208,7 +211,7 @@ rule "Trabalho + Estudo 1"
      		ProgramaObject: Programa(faixaEtariaDe >=18 && faixaEtariaAte <=26)
                  		               Programa(acomodacao.contains("CA"))
                  		               Programa(nivel.contains("I")  )
-                 		               Programa(escolaridade =="NA")
+                 		               //Programa(escolaridade =="NA")
                  		               Programa(destinos =="EUA")
                  		               Programa(duracaoDe >=2 && duracaoAte <=104)
                  		               Programa(tipoInter=="TE")
@@ -222,7 +225,7 @@ rule "Trabalho + Estudo 1"
      		ProgramaObject: Programa(faixaEtariaDe >=18 && faixaEtariaAte <=26)
                  		               Programa(acomodacao.contains("CA"))
                  		               Programa(nivel.contains("I")  )
-                 		               Programa(escolaridade =="EM")
+                 		               Programa(escolaridade.contains("EF"))
                  		               Programa(destinos =="AUS")
                  		               Programa(duracaoDe >=2 && duracaoAte <=104)
                  		               Programa(tipoInter=="TE")

@@ -10,7 +10,7 @@ public class Programa {
     private String 	tipoInter;
     private int faixaEtariaDe;
     private int faixaEtariaAte;
-    private String escolaridade;
+    private List escolaridade;
     private String destinos;
     private List nivel;
     private int duracaoDe;
