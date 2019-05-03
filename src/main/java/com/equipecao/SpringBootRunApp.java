@@ -11,7 +11,6 @@ public class SpringBootRunApp {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootRunApp.class, args);
-
 	}
 
 	@Bean
