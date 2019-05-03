@@ -4,7 +4,6 @@ import com.equipecao.model.Programa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.equipecao.model.Product;
 import com.equipecao.service.TipoProgramaService;
 
 @RestController
