@@ -9,7 +9,7 @@ rule "Cursos de idiomas 1"
 		ProgramaObject: Programa(faixaEtaria >=9 && faixaEtaria <=18)
 		               Programa(acomodacao.contains("RE") || acomodacao.contains("CF") || acomodacao.contains("H") || acomodacao.contains("A") || acomodacao.contains("CU"))
 		               //Programa(nivel.contains("NA"))
-		               Programa(!escolaridade.contains("M") && !escolaridade.contains("EF"))
+		               Programa(!escolaridade.contains("EM") && !escolaridade.contains("EF"))
 		               //Programa(destinos =="NA")
 		               Programa(duracao >= 2)
 		               Programa(duracao <= 6)
@@ -68,7 +68,7 @@ rule "High School 1"
     		ProgramaObject: Programa(faixaEtaria >=14 && faixaEtaria <=18)
                 		               //Programa(acomodacao.contains("NA"))
                 		               //Programa(nivel.contains("NA"))
-                		               Programa(escolaridade.contains("EF"))
+                		               Programa(escolaridade.contains("EM"))
                 		               //Programa(destinos =="NA")
                 		               Programa(duracao >=2 && duracao <=6)
                 		               Programa(tipoInter=="E")
@@ -94,7 +94,7 @@ rule "Estudo 1"
 rule "Estudo 2"
 	when
     		ProgramaObject: Programa(faixaEtaria >=18 && faixaEtaria <=35)
-                		               Programa(acomodacao.contains("RE") || acomodacao.contains("CA") || acomodacao.contains("H"))
+                		               Programa(acomodacao.contains("RE") || acomodacao.contains("CF") || acomodacao.contains("H"))
                 		               Programa(nivel.contains("I"))
                 		               //Programa(escolaridade =="NA")
                 		               //Programa(destinos =="NA")
@@ -161,19 +161,6 @@ rule "Estudo 6"
     		ProgramaObject.setCurso("Curso de Idiomas");
     	end
 
-rule "Estudo 7"
-	when
-    		ProgramaObject: Programa(faixaEtaria >=18 && faixaEtaria <=35)
-                		               //Programa(acomodacao.contains("NA"))
-                		               //Programa(nivel.contains("NA"))
-                		               //Programa(escolaridade =="NA")
-                		               //Programa(destinos =="NA")
-                		               Programa(duracao >=8 && duracao <=156)
-                		               Programa(tipoInter=="E")
-
-    	then
-    		ProgramaObject.setCurso("Telefone da Experimento");
-    	end
 
 //TRABALHO
 
@@ -196,7 +183,7 @@ rule "Trabalho + Estudo 1"
      		ProgramaObject: Programa(faixaEtaria >=18 && faixaEtaria <=26)
                  		               //Programa(acomodacao.contains("NA"))
                  		               Programa(nivel.contains("I") || nivel.contains("A") )
-                 		               Programa(escolaridade.contains("EF"))
+                 		               Programa(escolaridade.contains("EMC"))
                  		               Programa(destinos.contains("ZA"))
                  		               Programa(duracao >=2 && duracao <=52)
                  		               Programa(tipoInter=="TE")
@@ -208,12 +195,14 @@ rule "Trabalho + Estudo 1"
  rule "Trabalho voluntário 2"
  	when
      		ProgramaObject: Programa(faixaEtaria >=18 && faixaEtaria <=26)
-                 		               Programa(acomodacao.contains("CA"))
+                 		               Programa(acomodacao.contains("CF"))
                  		               Programa(nivel.contains("I")  )
                  		               //Programa(escolaridade =="NA")
                  		               Programa(destinos.contains("EUA"))
                  		               Programa(duracao >=2 && duracao <=104)
                  		               Programa(tipoInter=="TE")
+                 		               Programa(gostaCrianca==true)
+                 		               Programa(sexo=="F")
 
      	then
      		ProgramaObject.setCurso("Aupair");
@@ -222,12 +211,12 @@ rule "Trabalho + Estudo 1"
  rule "Trabalho voluntário 3"
  	when
      		ProgramaObject: Programa(faixaEtaria >=18 && faixaEtaria <=26)
-                 		               Programa(acomodacao.contains("CA"))
-                 		               Programa(nivel.contains("I")  )
-                 		               Programa(escolaridade.contains("EF"))
+                 		               Programa(acomodacao.contains("CF"))
+                 		               Programa(nivel.contains("I"))
                  		               Programa(destinos.contains("AUS"))
                  		               Programa(duracao >=2 && duracao <=104)
-                 		               Programa(tipoInter=="TE")
+                 		               Programa(gostaCrianca==true)
+                 		               Programa(sexo=="M")
 
      	then
      		ProgramaObject.setCurso("Demi pair");
