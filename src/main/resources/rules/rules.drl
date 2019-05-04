@@ -17,6 +17,7 @@ rule "Cursos de idiomas 1"
 
 	then
 		ProgramaObject.setCurso("Cursos de idiomas");
+		ProgramaObject.setCursoCode("CI");
 	end
 
 	rule "Cursos de idiomas 2"
@@ -32,6 +33,7 @@ rule "Cursos de idiomas 1"
 
     	then
     		ProgramaObject.setCurso("Cursos de idiomas");
+    		ProgramaObject.setCursoCode("CI");
     	end
 
 rule "Oferecer o Programa de Férias 1"
@@ -46,6 +48,7 @@ rule "Oferecer o Programa de Férias 1"
 
     	then
     		ProgramaObject.setCurso("Programa de Férias");
+    		ProgramaObject.setCursoCode("PF");
     	end
 
 rule "Oferecer o Programa de Férias 2"
@@ -60,6 +63,8 @@ rule "Oferecer o Programa de Férias 2"
 
     	then
     		ProgramaObject.setCurso("Programa de Férias");
+    		ProgramaObject.setCursoCode("PF");
+
     	end
 
 
@@ -75,6 +80,7 @@ rule "High School 1"
 
     	then
     		ProgramaObject.setCurso("High School");
+    		ProgramaObject.setCursoCode("HS");
     	end
 
 rule "Estudo 1"
@@ -89,6 +95,7 @@ rule "Estudo 1"
 
     	then
     		ProgramaObject.setCurso("Telefone da Experimento");
+    		ProgramaObject.setCursoCode("TE");
     	end
 
 rule "Estudo 2"
@@ -103,6 +110,7 @@ rule "Estudo 2"
 
     	then
     		ProgramaObject.setCurso("Programa Universitário e Programa Profissional");
+    		ProgramaObject.setCursoCode("PUPP");
     	end
 
 rule "Estudo 3"
@@ -117,6 +125,7 @@ rule "Estudo 3"
 //Se o usuário escolher Campus Universitário, exibir apenas Programa Universitário.
     	then
     		ProgramaObject.setCurso("Programa Universitário");
+    		ProgramaObject.setCursoCode("PU");
     	end
 
 rule "Estudo 4"
@@ -131,6 +140,7 @@ rule "Estudo 4"
 
     	then
     		ProgramaObject.setCurso("Formação Profissional ou Programa Universitário");
+    		ProgramaObject.setCursoCode("FPPU");
     	end
 
 rule "Estudo 5"
@@ -145,6 +155,7 @@ rule "Estudo 5"
 
     	then
     		ProgramaObject.setCurso("Formação Profissional");
+    		ProgramaObject.setCursoCode("FP");
     	end
 
 rule "Estudo 6"
@@ -159,6 +170,7 @@ rule "Estudo 6"
 
     	then
     		ProgramaObject.setCurso("Curso de Idiomas");
+    		ProgramaObject.setCursoCode("CI");
     	end
 
 
@@ -176,6 +188,7 @@ rule "Trabalho + Estudo 1"
 
     	then
     		ProgramaObject.setCurso("Trabalho + Estudo");
+    		ProgramaObject.setCursoCode("TE");
     	end
 
  rule "Trabalho voluntário 1"
@@ -190,6 +203,7 @@ rule "Trabalho + Estudo 1"
 
      	then
      		ProgramaObject.setCurso("Trabalho voluntário");
+     		ProgramaObject.setCursoCode("TV");
      	end
 
  rule "Trabalho voluntário 2"
@@ -206,6 +220,7 @@ rule "Trabalho + Estudo 1"
 
      	then
      		ProgramaObject.setCurso("Aupair");
+     		ProgramaObject.setCursoCode("AU");
      	end
 
  rule "Trabalho voluntário 3"
@@ -220,4 +235,5 @@ rule "Trabalho + Estudo 1"
 
      	then
      		ProgramaObject.setCurso("Demi pair");
+     		ProgramaObject.setCursoCode("DEMI");
      	end

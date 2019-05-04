@@ -17,6 +17,7 @@ public class Programa {
     private String curso;
     private String sexo;
     private Boolean gostaCrianca;
+    private String cursoCode;
 
     public String getTipoInter() {
         return tipoInter;
@@ -96,5 +97,13 @@ public class Programa {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    public String getCursoCode() {
+        return cursoCode;
+    }
+
+    public void setCursoCode(String cursoCode) {
+        this.cursoCode = cursoCode;
     }
 }
